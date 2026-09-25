@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 32" width="120" height="32" role="img" aria-label="Nervous">
+  <polyline points="2,16 18,16 24,6 30,26 36,16 52,16" fill="none" stroke="#8a5a3b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="60" y="22" font-family="Georgia, serif" font-size="16" fill="#1e1c1a">Nervous</text>
+</svg>
