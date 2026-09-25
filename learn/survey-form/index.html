@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Нейродом — опрос</title>
+  <meta name="description" content="Опрос: что вам нужно от домашнего ИИ. Учебный проект freeCodeCamp.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="wrap">
+    <header class="masthead">
+      <p class="eyebrow">freeCodeCamp &middot; Responsive Web Design &middot; проект 1</p>
+      <h1 id="title">Что вам нужно от домашнего ИИ</h1>
+      <p id="description">
+        Я собираю требования к Нейродому — машине, которая стоит у вас дома,
+        работает без облака и говорит только с вами. Ответьте на несколько
+        вопросов. Форма учебная: она проверяет ввод, но никуда ничего не отправляет.
+      </p>
+    </header>
+
+    <form id="survey-form">
+      <fieldset>
+        <legend>Кто отвечает</legend>
+
+        <div class="field">
+          <label id="name-label" for="name">Имя или ник</label>
+          <input id="name" name="name" type="text" required
+                 placeholder="Как к вам обращаться" autocomplete="nickname">
+        </div>
+
+        <div class="field">
+          <label id="email-label" for="email">Почта</label>
+          <input id="email" name="email" type="email" required
+                 placeholder="you@example.com" autocomplete="email">
+        </div>
+
+        <div class="field">
+          <label id="number-label" for="number">Сколько устройств у вас дома</label>
+          <input id="number" name="number" type="number" min="1" max="50"
+                 placeholder="от 1 до 50" inputmode="numeric">
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Что для вас важнее всего</legend>
+
+        <div class="field">
+          <label for="dropdown">Главное требование</label>
+          <select id="dropdown" name="priority">
+            <option value="privacy">Чтобы данные не уходили из дома</option>
+            <option value="offline">Чтобы работало без интернета</option>
+            <option value="speed">Чтобы отвечало мгновенно</option>
+            <option value="smarts">Чтобы понимало сложные задачи</option>
+            <option value="cost">Чтобы не было подписки</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <span class="group-label">Где вы готовы её держать</span>
+          <label class="choice" for="place-closet">
+            <input id="place-closet" type="radio" name="placement" value="closet" checked>
+            В шкафу, лишь бы тихо
+          </label>
+          <label class="choice" for="place-desk">
+            <input id="place-desk" type="radio" name="placement" value="desk">
+            На столе, хочу видеть
+          </label>
+          <label class="choice" for="place-rack">
+            <input id="place-rack" type="radio" name="placement" value="rack">
+            В стойке рядом с сервером
+          </label>
+        </div>
+
+        <div class="field">
+          <span class="group-label">Что должно уметь (можно несколько)</span>
+          <label class="choice" for="skill-voice">
+            <input id="skill-voice" type="checkbox" name="skills" value="voice">
+            Понимать голос
+          </label>
+          <label class="choice" for="skill-memory">
+            <input id="skill-memory" type="checkbox" name="skills" value="memory">
+            Помнить прошлые разговоры
+          </label>
+          <label class="choice" for="skill-home">
+            <input id="skill-home" type="checkbox" name="skills" value="home">
+            Управлять умным домом
+          </label>
+          <label class="choice" for="skill-code">
+            <input id="skill-code" type="checkbox" name="skills" value="code">
+            Писать и править код
+          </label>
+          <label class="choice" for="skill-company">
+            <input id="skill-company" type="checkbox" name="skills" value="company">
+            Просто быть рядом и разговаривать
+          </label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Свободный ответ</legend>
+
+        <div class="field">
+          <label for="comments">Что бы вы ей поручили в первый день</label>
+          <textarea id="comments" name="comments" rows="4"
+                    placeholder="Одно дело, которое вы отдали бы машине прямо сейчас"></textarea>
+        </div>
+      </fieldset>
+
+      <button id="submit" type="submit">Отправить</button>
+    </form>
+
+    <footer>
+      <p>Учебный проект. Ответы остаются в вашем браузере.</p>
+    </footer>
+  </main>
+</body>
+</html>

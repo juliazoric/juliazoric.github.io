@@ -1,0 +1,59 @@
+:root {
+  --bg: #fbf9f6;
+  --fg: #1e1c1a;
+  --muted: #6b6560;
+  --line: #e2dcd4;
+  --accent: #8a5a3b;
+  --card: #ffffff;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #171614;
+    --fg: #ece7e0;
+    --muted: #9c948b;
+    --line: #302c28;
+    --accent: #d09a6f;
+    --card: #201e1b;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font: 16px/1.65 ui-serif, Georgia, "Times New Roman", serif;
+  padding: clamp(1.5rem, 5vw, 4rem) clamp(1rem, 5vw, 2rem);
+}
+main { max-width: 46rem; margin: 0 auto; }
+header { border-bottom: 1px solid var(--line); padding-bottom: 1.5rem; margin-bottom: 2rem; }
+h1 { font-size: clamp(1.8rem, 5vw, 2.6rem); margin: 0 0 .3rem; letter-spacing: -.02em; }
+h2 {
+  font-size: .8rem; text-transform: uppercase; letter-spacing: .12em;
+  color: var(--muted); font-family: ui-sans-serif, system-ui, sans-serif;
+  margin: 2.5rem 0 .8rem; font-weight: 600;
+}
+h3 { font-size: 1.05rem; margin: 1.4rem 0 .2rem; }
+.tagline { color: var(--muted); font-size: 1.05rem; margin: 0; }
+a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+a:hover { text-decoration-thickness: 2px; }
+p { margin: .6rem 0; }
+ul { margin: .5rem 0; padding-left: 1.2rem; }
+li { margin: .3rem 0; }
+.meta { color: var(--muted); font-size: .9rem; font-family: ui-sans-serif, system-ui, sans-serif; }
+.skill { display: grid; gap: .35rem 1.5rem; grid-template-columns: 11rem 1fr; margin: .5rem 0; }
+.skill dt { font-family: ui-sans-serif, system-ui, sans-serif; font-size: .9rem; color: var(--muted); }
+.skill dd { margin: 0; }
+.project { border-left: 2px solid var(--line); padding-left: 1rem; margin: 1.2rem 0; }
+.project h3 { margin-top: 0; }
+footer { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--line); color: var(--muted); font-size: .9rem; }
+@media (max-width: 34rem) {
+  .skill { grid-template-columns: 1fr; gap: 0; }
+  .skill dt { margin-top: .6rem; }
+}
+@media print {
+  :root { --bg: #fff; --fg: #000; --muted: #444; --line: #ccc; --accent: #000; }
+  body { padding: 0; font-size: 11pt; }
+  h2 { margin-top: 1.2rem; }
+  a { text-decoration: none; }
+}

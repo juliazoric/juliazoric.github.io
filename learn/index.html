@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Learning — Yulia Zoric</title>
+  <meta name="description" content="freeCodeCamp Responsive Web Design certification projects — what is done and how it was verified.">
+  <style>
+    :root {
+      --bg: #171512; --surface: #201d19; --ink: #efe8df;
+      --ink-soft: #a89e93; --line: #332e28; --accent: #d98b52;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0; padding: 3rem 1rem; background: var(--bg); color: var(--ink);
+      font: 400 clamp(1rem, 0.95rem + 0.25vw, 1.0625rem)/1.65
+            ui-serif, Georgia, "Iowan Old Style", "Times New Roman", serif;
+    }
+    main { max-width: 38rem; margin-inline: auto; }
+    .eyebrow {
+      margin: 0 0 .75rem; font-family: ui-monospace, Menlo, Consolas, monospace;
+      font-size: .75rem; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-soft);
+    }
+    h1 { margin: 0 0 .75rem; font-size: clamp(1.75rem, 1.1rem + 2.8vw, 2.5rem); line-height: 1.08; letter-spacing: -.02em; font-weight: 600; }
+    .lede { margin: 0 0 2rem; color: var(--ink-soft); text-wrap: pretty; }
+    ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 1rem; }
+    li {
+      padding: 1.25rem 1.5rem; border: 1px solid var(--line);
+      border-radius: 6px; background: var(--surface);
+    }
+    li h2 { margin: 0 0 .5rem; font-size: 1.125rem; font-weight: 600; }
+    li h2 a { color: var(--ink); text-decoration: none; }
+    li h2 a:hover { color: var(--accent); }
+    li p { margin: 0; font-size: .9375rem; color: var(--ink-soft); text-wrap: pretty; }
+    .done { color: var(--accent); font-family: ui-monospace, Menlo, Consolas, monospace; font-size: .75rem; letter-spacing: .08em; text-transform: uppercase; }
+    .todo { color: #6f675e; font-family: ui-monospace, Menlo, Consolas, monospace; font-size: .75rem; letter-spacing: .08em; text-transform: uppercase; }
+    footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--line); font-size: .875rem; color: var(--ink-soft); }
+    a { color: var(--accent); text-underline-offset: .2em; }
+  </style>
+</head>
+<body>
+  <main>
+    <p class="eyebrow">freeCodeCamp &middot; Responsive Web Design</p>
+    <h1>Learning</h1>
+    <p class="lede">
+      Five projects required for the certificate. I build them here and check them
+      beforehand with freeCodeCamp's own tests rather than my own opinion of my work.
+    </p>
+
+    <ul>
+      <li>
+        <h2><a href="survey-form/">1. Survey Form</a></h2>
+        <p><span class="done">done &middot; 44/44</span><br>
+        A survey about what you want from a home AI server: text fields, radio buttons,
+        checkboxes, a select, and validation.</p>
+      </li>
+      <li>
+        <h2><a href="tribute-page/">2. Tribute Page</a></h2>
+        <p><span class="done">done &middot; 19/19</span><br>
+        Grey Walter — the neurophysiologist who built the first autonomous robots in 1948
+        and wrote &ldquo;A machine that learns&rdquo; in 1951.</p>
+      </li>
+      <li>
+        <h2><a href="technical-documentation/">3. Technical Documentation Page</a></h2>
+        <p><span class="done">done &middot; 22/22</span><br>
+        Documentation for a personal AI home: memory, heartbeat, sandbox and channel —
+        with a fixed sidebar navigation.</p>
+      </li>
+      <li>
+        <h2>4. Product Landing Page</h2>
+        <p><span class="todo">next</span><br>
+        A single page with a sign-up form and a responsive layout.</p>
+      </li>
+      <li>
+        <h2>5. Personal Portfolio</h2>
+        <p><span class="todo">next</span><br>
+        A personal page linking to everything built above.</p>
+      </li>
+    </ul>
+
+    <footer>
+      <p><a href="../">&larr; Home</a></p>
+    </footer>
+  </main>
+</body>
+</html>

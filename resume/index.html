@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yulia Zoric — Software Developer</title>
+<meta name="description" content="Yulia Zoric — software developer. Small systems that stay up: Python services, Telegram bots, hand-written web front-ends.">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<main>
+
+<header>
+  <h1>Yulia Zoric</h1>
+  <p class="tagline">Software developer — small systems that stay up.</p>
+  <p class="meta">Belgrade, Serbia · <a href="mailto:julia.zoric@proton.me">julia.zoric@proton.me</a> · <a href="https://github.com/juliazoric">github.com/juliazoric</a></p>
+</header>
+
+<section>
+  <h2>Summary</h2>
+  <p>I build small, boring systems that keep working: Python services under systemd, Telegram bots with real behaviour, and hand-written web front-ends that do not need a framework. Most of my work is unglamorous and that is the point — I care about the parts that fail quietly: the error nobody logs, the assumption nobody checked.</p>
+</section>
+
+<section>
+  <h2>Skills</h2>
+  <dl>
+    <div class="skill">
+      <dt>Languages</dt>
+      <dd>Python (standard library, no framework dependency), JavaScript, HTML, CSS, Bash</dd>
+    </div>
+    <div class="skill">
+      <dt>Systems</dt>
+      <dd>Linux (AlmaLinux, Debian), systemd units, nginx, SELinux, firewalld, SSH</dd>
+    </div>
+    <div class="skill">
+      <dt>Containers</dt>
+      <dd>Docker, Docker Compose, multi-container services with health checks</dd>
+    </div>
+    <div class="skill">
+      <dt>LLM integration</dt>
+      <dd>llama.cpp, OpenAI-compatible APIs, prompt design, tool calling, local inference on CPU</dd>
+    </div>
+    <div class="skill">
+      <dt>APIs</dt>
+      <dd>Telegram Bot API (long polling, reactions, chat actions), HTTP clients, rate-limit handling</dd>
+    </div>
+    <div class="skill">
+      <dt>Practice</dt>
+      <dd>Git, debugging by measurement, writing things down so the next person does not guess</dd>
+    </div>
+  </dl>
+</section>
+
+<section>
+  <h2>Projects</h2>
+
+  <div class="project">
+    <h3>Petrovich — a Telegram character bot</h3>
+    <p class="meta">Python · Docker · llama.cpp / cloud LLM</p>
+    <p>A grumpy engineer who lives in a group chat: answers when called, tells jokes, argues about drink, and swears at advertising posted by other bots. Runs with no third-party Python packages at all, and deploys in one command with Docker Compose.</p>
+    <p>Notable work: routing rules that keep a bot quiet in direct messages and responsive in groups; a two-stage spam filter (keyword heuristics, then a small local model) that only ever sees messages from other bots; a cloud brain with automatic fallback to a local model when the API fails.</p>
+    <p><a href="https://github.com/juliazoric/petrovich">github.com/juliazoric/petrovich</a></p>
+  </div>
+
+  <div class="project">
+    <h3>A Telegram listener that does not lose messages</h3>
+    <p class="meta">Python · systemd · queue on disk</p>
+    <p>An architecture fix, not a feature. Several short-lived sessions were each polling the same bot token, which caused conflicts and lost messages. The solution: one permanent listener owns the token and writes every message to a queue on disk; sessions read the queue and mark what they have taken.</p>
+    <p>Result: conflicts became structurally impossible, messages survive a session restart, and the user can see when a message has been picked up.</p>
+  </div>
+
+  <div class="project">
+    <h3>A self-deploying restore kit</h3>
+    <p class="meta">Bash · cross-distribution</p>
+    <p>One script that rebuilds an environment on a fresh machine: detects the distribution and architecture, installs the toolchain, restores configuration and data, and prints exactly what remains for a human to do. Tested end to end in clean containers on Debian 12, Debian 13, AlmaLinux 9 and AlmaLinux 10.</p>
+    <p>The interesting part was the failures: an empty <code>sudo</code> variable breaking a piped installer, a native module needing build tools that a minimal image does not ship, and the <code>curl-minimal</code> package conflicting with <code>curl</code> on RHEL 9. None of them were visible by reading the script.</p>
+  </div>
+
+  <div class="project">
+    <h3>This site</h3>
+    <p class="meta">Hand-written HTML and CSS</p>
+    <p>No framework, no build step. Responsive layout, dark mode via <code>prefers-color-scheme</code>, and a print stylesheet so the résumé is readable on paper.</p>
+  </div>
+</section>
+
+<section>
+  <h2>Learning</h2>
+  <p><strong>freeCodeCamp — Responsive Web Design certification.</strong> Working through the certification projects and verifying each one against freeCodeCamp's own test suite rather than my own checks.</p>
+  <ul>
+    <li>Survey Form — 44/44 of their tests passing</li>
+    <li>Tribute Page — 19/19 passing, one of them additionally verified in a real browser because jsdom cannot measure layout</li>
+    <li>Technical Documentation Page — 22/22 passing</li>
+    <li>Landing Page and Portfolio Page — in progress</li>
+  </ul>
+  <p>I list this as learning, not as a credential: the certificate is not issued yet, and I do not claim qualifications I have not finished.</p>
+</section>
+
+<section>
+  <h2>How I work</h2>
+  <ul>
+    <li><strong>Measure, do not assume.</strong> A claim about a system is worth nothing until something outside me confirms it. Several bugs in my own work were found only by running the thing.</li>
+    <li><strong>Write down what broke.</strong> Every mistake becomes a note, so the next attempt starts from evidence instead of optimism.</li>
+    <li><strong>Prefer the simple thing that works.</strong> A plain script that survives beats an elegant design that needs three layers.</li>
+  </ul>
+</section>
+
+<footer>
+  <p><a href="../">← Home</a> · <a href="mailto:julia.zoric@proton.me">julia.zoric@proton.me</a></p>
+</footer>
+
+</main>
+</body>
+</html>
