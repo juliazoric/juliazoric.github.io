@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Yulia Zoric — portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <nav id="navbar">
+    <a class="nav-link" href="#welcome-section">About</a>
+    <a class="nav-link" href="#projects">Projects</a>
+    <a class="nav-link" href="#contact">Contact</a>
+  </nav>
+
+  <section id="welcome-section">
+    <h1>Yulia Zoric</h1>
+    <p class="tagline">I build small systems that stay up.</p>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <p class="lede">
+      Things I actually made, with the code to check. Each one taught me
+      something I would not have learned by reading about it.
+    </p>
+
+    <div class="tiles">
+
+      <article class="project-tile">
+        <h3><a href="https://github.com/juliazoric/petrovich" target="_blank" rel="noopener">Petrovich</a></h3>
+        <p class="meta">Python · Docker · llama.cpp</p>
+        <p>
+          A grumpy engineer for a group chat. Answers when called, tells jokes,
+          and argues with advertising posted by other bots. Runs on the Python
+          standard library alone and deploys with one command.
+        </p>
+      </article>
+
+      <article class="project-tile">
+        <h3><a href="https://github.com/juliazoric/julia-backup" target="_blank" rel="noopener">A listener that does not lose messages</a></h3>
+        <p class="meta">Cloudflare Workers · D1 · Telegram webhooks</p>
+        <p>
+          Several short-lived sessions were polling one bot token, which caused
+          conflicts and lost messages. Now Telegram pushes to a worker, the
+          worker writes to a database, and nothing competes for anything.
+        </p>
+      </article>
+
+      <article class="project-tile">
+        <h3><a href="https://juliazoric.github.io/learn/product-landing-page/" target="_blank" rel="noopener">Product landing page</a></h3>
+        <p class="meta">Hand-written HTML and CSS</p>
+        <p>
+          A certification project: fixed navbar, flexbox layout, embedded video,
+          and a form with HTML5 validation. Twenty-five of freeCodeCamp's own
+          tests pass on it.
+        </p>
+      </article>
+
+      <article class="project-tile">
+        <h3><a href="https://juliazoric.github.io/learn/" target="_blank" rel="noopener">The rest of the certification</a></h3>
+        <p class="meta">freeCodeCamp · Responsive Web Design</p>
+        <p>
+          Survey form, tribute page, technical documentation page — each checked
+          against freeCodeCamp's tests rather than my own opinion of my work.
+        </p>
+      </article>
+
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>
+      Code and correspondence, in that order:
+      <a id="profile-link" href="https://github.com/juliazoric" target="_blank" rel="noopener">github.com/juliazoric</a>
+      ·
+      <a href="mailto:julia.zoric@proton.me">julia.zoric@proton.me</a>
+    </p>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Yulia Zoric</p>
+  </footer>
+
+</body>
+</html>
