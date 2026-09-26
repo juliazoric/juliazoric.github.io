@@ -57,3 +57,27 @@ footer { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--line
   h2 { margin-top: 1.2rem; }
   a { text-decoration: none; }
 }
+
+/* Сертификат: показываем как артефакт, но не даём картинке занять весь экран */
+.certificate {
+  margin: 1.75rem 0 0;
+}
+
+.certificate img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+}
+
+.certificate figcaption {
+  margin-top: 0.6rem;
+  font-size: 0.875rem;
+  color: var(--ink-soft);
+}
+
+@media print {
+  .certificate { break-inside: avoid; }
+  .certificate img { max-width: 100%; }
+}
